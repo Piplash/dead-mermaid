@@ -9,6 +9,11 @@
     background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    /* Smooth Scroll*/
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    position: relative;
   }
   
   .content {
@@ -16,11 +21,26 @@
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Añade sombra para contraste */
     max-width: 600px; /* Limita el ancho del contenido */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente detrás del texto */
-    border-radius: 10px; /* Bordes redondeados */
   }
 
+  .content span {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(255, 0, 140) 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 2s ease, color 0.5s ease;
+    background-position: -200% 0; /* Posición inicial */
+}
 
+.content span:hover {
+    background-position: -100%;
+}
+    
 /* Smoke Preloader */
 .cd-transition-layer {
     position: fixed;

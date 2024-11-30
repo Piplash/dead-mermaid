@@ -1,0 +1,43 @@
+.navbar-custom {
+    background-color: transparent !important;
+    position: fixed; /* Cambiar de absolute a fixed */
+    min-width: 100vw;
+    font-size: 1rem;
+    z-index: 99999;
+    width: 100%; /* Asegúrate de que ocupe todo el ancho */
+}
+
+.navbar-brand {
+    margin-left: 5%;
+}
+
+.navitems-custom {
+    margin-right: 5%;
+}
+
+img {
+    max-height: 150px;
+}
+
+.navbar-custom a {
+    position: relative;
+    color: white;
+    background: linear-gradient(to right, white 50%, rgb(10, 198, 204) 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1s ease, color 0.5s ease;
+    text-decoration: none;
+}
+
+.navbar-custom a:hover {
+    background-position: -100% 0;
+    color: transparent; /* Ensure the gradient stays visible */
+}
+
+/* Active link styles */
+.navbar-custom .active {
+    background: none; /* Disable gradient */
+    -webkit-text-fill-color: rgb(255, 0, 128); /* Set the text color */
+}
