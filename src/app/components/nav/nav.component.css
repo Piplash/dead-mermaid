@@ -3,7 +3,7 @@
     position: fixed; /* Cambiar de absolute a fixed */
     min-width: 100vw;
     font-size: 1rem;
-    z-index: 99999;
+    z-index: 1;
     width: 100%; /* Asegúrate de que ocupe todo el ancho */
 }
 
