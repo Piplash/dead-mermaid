@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 interface Imagen {
   src: string; // URL de la imagen
@@ -6,22 +6,17 @@ interface Imagen {
 }
 
 @Component({
-  selector: 'app-portafolio',
+  selector: "app-portafolio",
   standalone: true,
   imports: [],
-  templateUrl: './portafolio.component.html',
-  styleUrl: './portafolio.component.css'
+  templateUrl: "./portafolio.component.html",
+  styleUrl: "./portafolio.component.css",
 })
-
 export class PortafolioComponent implements OnInit {
-
-  
-
   public imagenes: Imagen[] = []; // Este será tu arreglo de imágenes
   public imagenesPorPagina = 16; // 4x4 imágenes por página
   public filas: Imagen[][] = [];
-  public selectedImage: string = ''; // Image to show in full screen
-
+  public selectedImage: string = ""; // Image to show in full screen
 
   ngOnInit(): void {
     this.imagenes = this.obtenerPortafolio(); // Llenar el arreglo con las imágenes
@@ -31,15 +26,15 @@ export class PortafolioComponent implements OnInit {
   public obtenerPortafolio() {
     // Aquí puedes llenar las imágenes con tu lógica, por ahora son ejemplos
     return [
-      { src: '1.jpg', descripcion: 'Descripción 1' },
-      { src: '2.jpg', descripcion: 'Descripción 2' },
-      { src: '3.jpg', descripcion: 'Descripción 3' },
-      { src: '4.jpg', descripcion: 'Descripción 4' },
-      { src: '5.jpg', descripcion: 'Descripción 5' },
-      { src: '6.jpg', descripcion: 'Descripción 6' },
-      { src: '7.jpg', descripcion: 'Descripción 7' },
-      { src: '8.jpg', descripcion: 'Descripción 8' },
-      { src: '9.jpg', descripcion: 'Descripción 9' },
+      { src: "1.jpg", descripcion: "Descripción 1" },
+      { src: "2.jpg", descripcion: "Descripción 2" },
+      { src: "3.jpg", descripcion: "Descripción 3" },
+      { src: "4.jpg", descripcion: "Descripción 4" },
+      { src: "5.jpg", descripcion: "Descripción 5" },
+      { src: "6.jpg", descripcion: "Descripción 6" },
+      { src: "7.jpg", descripcion: "Descripción 7" },
+      { src: "8.jpg", descripcion: "Descripción 8" },
+      { src: "9.jpg", descripcion: "Descripción 9" },
     ];
   }
 
@@ -56,6 +51,6 @@ export class PortafolioComponent implements OnInit {
   }
 
   closeFullScreen(): void {
-    this.selectedImage = ''; // Close the full screen view
+    this.selectedImage = ""; // Close the full screen view
   }
 }

@@ -1,33 +1,30 @@
+<section id="inicio" class="inicio" #inicio>
+  <div class="landing-container">
+    <app-preloader></app-preloader>
 
+    <div class="content">
+      <p class="font-barlow">DEAD MERMAID TATTOO</p>
+      <h1
+        class="font-oswald"
+        style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7)"
+      >
+        ATRÉVETE A LLENAR TU PIEL
+        <br />
+      </h1>
+      <h1 class="font-oswald">
+        <span class="borders-white pintar">DE COLOR </span>
+      </h1>
 
-  <section id="inicio" class="inicio" #inicio>
-    <div class="landing-container">
-      <app-preloader></app-preloader>
-        
-      <div class="content">
-        <p class="font-barlow">DEAD MERMAID TATTOO</p>
-        <h1 class="font-oswald" style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">
-          ATRÉVETE A LLENAR TU PIEL
-          <br>
-          
-        </h1>
-        <h1 class="font-oswald">
-          <span class="borders-white pintar">DE COLOR </span>
-        </h1>
-        
-        <br>
-        <button class="btn-custom btn-1" (click)="scrollTo(sobreMi)">
-          <span class="btn-text font-barlow">QUIÉN SOY</span>
-        </button>
-      </div>
+      <br />
+      <button class="btn-custom btn-1" (click)="scrollTo(sobreMi)">
+        <span class="btn-text font-barlow">QUIÉN SOY</span>
+      </button>
     </div>
-  </section>
-  <section id="sobre-mi" #sobreMi>
-    <app-about [portafolio]="portafolio"></app-about>
-  </section>
-  <section id="portafolio" #portafolio>
-    <app-portafolio></app-portafolio>
-  </section>
-
-
-
+  </div>
+</section>
+<section id="sobre-mi" #sobreMi>
+  <app-about [portafolio]="portafolio"></app-about>
+</section>
+<section id="portafolio" #portafolio>
+  <app-portafolio></app-portafolio>
+</section>
