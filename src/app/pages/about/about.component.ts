@@ -4,7 +4,7 @@ import { PortafolioComponent } from "../portafolio/portafolio.component";
 @Component({
   selector: "app-about",
   standalone: true,
-  imports: [PortafolioComponent],
+  imports: [],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css",
 })
