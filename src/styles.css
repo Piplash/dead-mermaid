@@ -10,3 +10,98 @@
     font-weight: 500;
     font-style: normal;
 }
+
+/* Basic Button Curve Style */
+.btn-custom {
+    background: transparent;
+    padding: 12px 24px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .btn-custom:focus,
+  .btn-custom:hover {
+    outline: none;
+  }
+  
+  .btn-custom span {
+    position: relative;
+    z-index: 2;
+    transition: all 0.8s;
+    display: block;
+  }
+  
+  .btn-custom:after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: 130%;
+    background: #000;
+    transform: rotate(-5deg);
+    transition: all 0.8s;
+  }
+  
+  .btn-custom:hover:after {
+    bottom: -30px;
+    transform: rotate(0deg);
+  }
+  
+  /* Specific Button Variations */
+  .btn-custom.btn-1 {
+    background: rgb(10, 200, 200);
+    color: #fff;
+  }
+  
+  .btn-custom.btn-1:hover {
+    color: #fff;
+  }
+  
+  .btn-custom.btn-1:after {
+    background: rgb(255, 0, 130)
+  }
+
+  .btn-text{
+    font-weight: 300;
+  }
+
+
+
+  
+  .borders-white{
+    color: transparent !important;
+    -webkit-text-stroke: 1px #fff !important;
+  }
+
+  .borders-black{
+    color: transparent !important;
+    -webkit-text-stroke: 1px #000 !important;
+  }
+ 
+
+  /* ANIMACION */
+  .pintar {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%,rgb(255, 0, 130) 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1s ease, color 0.5s ease;
+    background-position: -200% 0; /* Posición inicial */
+}
+
+.pintar:hover {
+    background-position: -100%;
+}
+    
+.text-par{
+  text-align: justify;
+}

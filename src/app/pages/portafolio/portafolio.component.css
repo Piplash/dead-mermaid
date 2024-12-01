@@ -1,0 +1,12 @@
+.content-container{
+    min-height: 100vh;
+    display: flex;
+}
+
+.content {
+    color: black; /* Texto en blanco para mejor visibilidad */
+    min-width: 90vw; /* Limita el ancho del contenido */
+    padding: 20px;
+    align-self: center;
+    margin: 0 auto;
+}

@@ -1,39 +1,33 @@
-<div class="section-container">
-  <app-nav></app-nav>
+
+
   <section id="inicio" class="inicio" #inicio>
     <div class="landing-container">
-      <div class="preloader-bg" id="preloader">
-          <div class="cd-transition-layer">
-            <div class="bg-layer"></div>
-          </div>
-          <div class="loader">
-            <span></span>
-          </div>
-        </div>
+      <app-preloader></app-preloader>
         
       <div class="content">
         <p class="font-barlow">DEAD MERMAID TATTOO</p>
-        <h1 class="font-oswald">
+        <h1 class="font-oswald" style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);">
           ATRÉVETE A LLENAR TU PIEL
           <br>
-          <span>DE COLOR </span>
+          
         </h1>
-        <button class="btn btn-primary">Descubre más</button>
+        <h1 class="font-oswald">
+          <span class="borders-white pintar">DE COLOR </span>
+        </h1>
+        
+        <br>
+        <button class="btn-custom btn-1" (click)="scrollTo(sobreMi)">
+          <span class="btn-text font-barlow">QUIÉN SOY</span>
+        </button>
       </div>
     </div>
   </section>
   <section id="sobre-mi" #sobreMi>
-asdsadsad
+    <app-about [portafolio]="portafolio"></app-about>
   </section>
-  <section id="conocimientos" #conocimientos>
-asdasda
+  <section id="portafolio" #portafolio>
+    <app-portafolio></app-portafolio>
   </section>
-  <section id="experiencia" #experiencia>
-asdsad
-  </section>
-  <section id="proyectos" #proyectos>
-asdas
-  </section>
-</div>
+
 
 

@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: transparent !important;
+    background-color: rgba(0,0,0,0.3) !important; /*transparent !important;*/
     position: fixed; /* Cambiar de absolute a fixed */
     min-width: 100vw;
     font-size: 1rem;
@@ -8,7 +8,7 @@
 }
 
 .navbar-brand {
-    margin-left: 5%;
+    margin-left: 1%;
 }
 
 .navitems-custom {
@@ -16,13 +16,13 @@
 }
 
 img {
-    max-height: 150px;
+    max-height: 90px;
 }
 
 .navbar-custom a {
     position: relative;
     color: white;
-    background: linear-gradient(to right, white 50%, rgb(10, 198, 204) 50%);
+    background: linear-gradient(to right, white 50%, rgb(10, 200, 200) 50%);
     background-size: 200% 100%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -39,5 +39,5 @@ img {
 /* Active link styles */
 .navbar-custom .active {
     background: none; /* Disable gradient */
-    -webkit-text-fill-color: rgb(255, 0, 128); /* Set the text color */
+    -webkit-text-fill-color: rgb(255, 0, 130); /* Set the text color */
 }
