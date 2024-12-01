@@ -1,20 +1,36 @@
 <div class="content-container">
     <div class="content">
-        <div class="row">
+        <div class="row row-titulo">
+            <p class="font-barlow">DEAD MERMAID TATTOO</p>
+            <h1 class="font-oswald">
+                PORTAFOLIO - <small>BLACK WORK &  <span class="pintar borders-black">COLOR</span></small>
+            </h1>
+            <br>
+            <hr>
+            <br>
+        </div>
+        <div class="container">
+            @for(fila of filas; track $index){
+                <div class="row row-img">
+                    @for(imagen of fila; track $index){
 
-                <p class="font-barlow">DEAD MERMAID TATTOO</p>
-                <h1 class="font-oswald">
-                  PORTAFOLIO
-                </h1>
-                <br>
-                <p class="text-par">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec finibus varius risus vitae interdum. Nulla lacus justo, blandit ac felis eget, finibus lacinia diam. Nullam eu turpis gravida, efficitur orci vitae, luctus arcu. Morbi vel est id nunc suscipit venenatis ac vitae velit. Nunc et fermentum libero, rhoncus dapibus nibh. Maecenas sapien nunc, hendrerit sed lectus sed, finibus tempus arcu. Sed blandit tristique odio. Phasellus sed metus erat. Etiam tortor nunc, maximus rutrum justo ac, varius ullamcorper mi. Suspendisse nibh nisl, volutpat non auctor fringilla, elementum a nunc. Pellentesque volutpat tortor elementum ornare egestas.
+                        <div class="col-sm-3">
+                            <img [src]="'/assets/portafolio/'+imagen.src" [alt]="imagen.descripcion" class="img-fluid" (click)="detalleImagen(imagen)">
+                          </div>
+                    }
 
-                    Integer quis bibendum nibh. Maecenas tempor erat sed suscipit consectetur. Sed at mi vel elit mattis interdum vel in quam. Donec odio tellus, hendrerit ut orci sed, finibus porttitor leo. Vestibulum vel consequat metus. Cras vitae risus ac tellus facilisis tempor ac nec nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec mollis venenatis dui at dictum.
-                </p>
-                <br>
+                </div>
+            }
+           
         </div>
 
     </div>
-
+    @if(selectedImage){
+        <div class="fullscreen-overlay" (click)="closeFullScreen()">
+            <div class="fullscreen-container">
+              <img [src]="'/assets/portafolio/' + selectedImage" class="fullscreen-image" />
+              <button class="close-btn" (click)="closeFullScreen()">X</button>
+            </div>
+          </div>
+     }
 </div>
