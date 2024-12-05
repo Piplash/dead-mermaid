@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
+import emailjs from "@emailjs/browser";
 interface Imagen {
   src: string; // URL de la imagen
   descripcion: string; // Descripción de la imagen
@@ -52,5 +52,27 @@ export class PortafolioComponent implements OnInit {
 
   closeFullScreen(): void {
     this.selectedImage = ""; // Close the full screen view
+  }
+
+  enviarCorreo() {
+    const templateParams = {
+      to_name: "Jasdames",
+      from_name: "Check thsssis out!",
+      message: "mensajemensaje",
+      reply_to: "probando@gmail.com",
+    };
+
+    emailjs
+      .send("service_6t4puba", "template_vqub5qq", templateParams, {
+        publicKey: "g3qJerRwbtpy5MJgM",
+      })
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        },
+      );
   }
 }

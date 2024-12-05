@@ -35,9 +35,11 @@
         <img
           [src]="'/assets/portafolio/' + selectedImage"
           class="fullscreen-image"
+          alt="fullscreenimg"
         />
         <button class="close-btn" (click)="closeFullScreen()">X</button>
       </div>
     </div>
   }
+  <button (click)="enviarCorreo()">Enviar correo</button>
 </div>
