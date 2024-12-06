@@ -1,1 +1,0 @@
-import{Da as i,Ea as o,Ka as a,La as m,V as n}from"./chunk-YBUSDZFR.js";var p=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-inicio-adm"]],standalone:!0,features:[m],decls:2,vars:0,template:function(t,c){t&1&&(i(0,"p"),a(1,"inicio-adm works!"),o())}})}}return e})();export{p as default};
