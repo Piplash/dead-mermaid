@@ -1,1 +1,0 @@
-import{Da as o,Ea as a,Ka as r,La as s,V as n}from"./chunk-YBUSDZFR.js";var c=(()=>{class e{static{this.\u0275fac=function(t){return new(t||e)}}static{this.\u0275cmp=n({type:e,selectors:[["app-reserva"]],standalone:!0,features:[s],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"p"),r(1,"reserva works!"),a())}})}}return e})();export{c as default};

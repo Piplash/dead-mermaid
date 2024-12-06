@@ -18,7 +18,7 @@
           @for (imagen of fila; track $index) {
             <div class="col-sm-3">
               <img
-                [src]="'/assets/portafolio/' + imagen.src"
+                [src]="'assets/portafolio/' + imagen.src"
                 [alt]="imagen.descripcion"
                 class="img-fluid"
                 (click)="detalleImagen(imagen)"
@@ -33,7 +33,7 @@
     <div class="fullscreen-overlay" (click)="closeFullScreen()">
       <div class="fullscreen-container">
         <img
-          [src]="'/assets/portafolio/' + selectedImage"
+          [src]="'assets/portafolio/' + selectedImage"
           class="fullscreen-image"
           alt="fullscreenimg"
         />
