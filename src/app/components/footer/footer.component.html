@@ -20,31 +20,55 @@
 
     <!-- Redes sociales -->
     <div
-      id="#redes"
+      id="redes"
       class="col-md-4 d-flex flex-column redes"
       style="align-items: flex-end"
     >
-      <h1
+      <h2
         id="redes-titulo"
         class="font-oswald borders-white pintar-2 text-center"
       >
         REDES
-      </h1>
+      </h2>
       <ul
         class="nav justify-content-center list-unstyled d-flex"
         aria-labelledby="redes-titulo"
       >
         <li class="ms-3">
-          <fa-icon [icon]="faInstagram"></fa-icon>
+          <a
+            href="https://instagram.com/deadmermaid.tattoo"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <fa-icon [icon]="faInstagram"></fa-icon>
+          </a>
         </li>
         <li class="ms-3">
-          <fa-icon [icon]="faTiktok"></fa-icon>
+          <a
+            href="https://tiktok.com/@deadmermaidttt"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <fa-icon [icon]="faTiktok"></fa-icon>
+          </a>
         </li>
         <li class="ms-3">
-          <fa-icon [icon]="faWhatsapp"></fa-icon>
+          <a
+            href="https://facebook.com/deadmermaid.tattoo/"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <fa-icon [icon]="faFacebook"></fa-icon>
+          </a>
         </li>
-        <li class="ms-3">
-          <fa-icon [icon]="faFacebook"></fa-icon>
+        <li class="ms-3 position-relative whatsapp-item">
+          <a
+            href="https://wa.me/56963521554"
+            target="_blank"
+            aria-label="WhatsApp"
+          >
+            <fa-icon [icon]="faWhatsapp"></fa-icon>
+          </a>
         </li>
       </ul>
     </div>

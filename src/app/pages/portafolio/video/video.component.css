@@ -1,0 +1,102 @@
+/* Contenedor principal que ocupa todo el alto de la pantalla */
+.content-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos dentro estén en una columna */
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+/* Contenedor del contenido con un margen y padding adecuado */
+.content {
+  color: black; /* Texto en negro para mejor visibilidad */
+  min-width: 90vw; /* Limita el ancho del contenido */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Espaciado entre las filas de imágenes */
+.row-img {
+  margin-bottom: 15px;
+}
+
+/* Estilo para las imágenes dentro de la cuadrícula */
+.img-fluid {
+  width: 100%; /* Hace que las imágenes ocupen el 100% de su contenedor */
+  height: 30vh; /* Establece una altura fija */
+  object-fit: cover; /* Hace que la imagen cubra el contenedor sin deformarse (recorta si es necesario) */
+  opacity: 0.7; /* Le da una ligera opacidad */
+  transition: opacity 0.5s ease; /* Transición suave de opacidad */
+  cursor: pointer; /* Cambia el cursor a puntero para indicar que es clickeable */
+}
+
+/* Efecto hover para aumentar la opacidad al pasar el mouse */
+.img-fluid:hover {
+  opacity: 1; /* Restablece la opacidad al pasar el mouse */
+  transition: opacity 0.5s ease; /* Asegura que el cambio de opacidad sea suave */
+}
+
+/* Ajuste para la primera imagen que ocupa dos filas */
+.gallery-box-tall img {
+  grid-row: span 2; /* Ocupa 2 filas en el sistema grid */
+  height: calc(60vh + 15px); /* Altura equivalente a dos filas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para el overlay de pantalla completa */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Fondo oscuro con algo de transparencia */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que esté encima del contenido */
+}
+
+/* Estilo de la imagen en pantalla completa */
+.fullscreen-image {
+  max-height: 70vh;
+  display: block;
+}
+
+iframe {
+  min-width: 80vw;
+  min-height: 80vh;
+}
+
+/* Media query para pantallas de 800px o menos */
+@media (max-width: 800px) {
+  .fullscreen-image {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  /* Ajustes para la cuadrícula en pantallas pequeñas */
+  .gallery-box-tall {
+    grid-row: auto; /* Elimina la altura de dos filas en pantallas pequeñas */
+  }
+
+  .gallery-box-tall img {
+    height: 200px !important; /* Altura equivalente a dos filas */
+  }
+
+  /* Estilo para las imágenes dentro de la cuadrícula */
+  .img-fluid {
+    margin-top: 10px;
+  }
+}

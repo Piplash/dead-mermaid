@@ -114,7 +114,7 @@
   background-position: -200% 0; /* Posición inicial */
 }
 
-.pintar,
+.pintar:hover,
 .pintar-2:hover {
   background-position: -100%;
 }
@@ -127,7 +127,7 @@
   display: inline-block;
   background: linear-gradient(
     to right,
-    rgba(0, 255, 234, 0) 50%,
+    rgb(0, 0, 0, 0) 50%,
     /* verde */ rgb(255, 0, 130) 50% /* rosado */
   );
   background-size: 200% 100%;
@@ -138,6 +138,10 @@
     background-position 1s ease,
     color 0.5s ease;
   background-position: -200% 0; /* Posición inicial */
+}
+
+.pintar-2:hover {
+  background-position: -100%;
 }
 
 .text-par {

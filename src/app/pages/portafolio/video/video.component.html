@@ -1,1 +1,47 @@
-<p>video works!</p>
+<div class="content-container">
+  <div class="content">
+    <div class="row row-titulo">
+      <h1 class="font-oswald">
+        VIDEO -
+        <small
+          >DEAD <span class="pintar borders-black">MERMAID</span> TATTOO</small
+        >
+      </h1>
+      <hr />
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Primera imagen en columna 1, con altura de 2 filas -->
+        <div class="col-md-12 gallery-item">
+          <div class="gallery-box gallery-box-tall">
+            <div class="gallery-img">
+              <img
+                src="assets/portafolio/7.jpg"
+                class="img-fluid mx-auto d-block"
+                alt="Imagen 7"
+                (click)="detalleImagen('7.jpg')"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Fullscreen Modal -->
+        @if (selectedImage) {
+          <div class="fullscreen-overlay" (click)="closeFullScreen()">
+            <div class="fullscreen-container">
+              <div class="iframe-container">
+                <iframe
+                  src="https://www.youtube.com/embed/PUGPLQPTak8?si=6Y2C0x0x5hVeZzDZ&autoplay=1"
+                  title="YouTube video player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
