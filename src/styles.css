@@ -20,6 +20,7 @@
   overflow: hidden;
   cursor: pointer;
   display: inline-block;
+  z-index: 0;
 }
 
 .btn-custom:focus,
