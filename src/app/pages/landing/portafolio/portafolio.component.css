@@ -14,11 +14,6 @@
   padding: 20px;
 }
 
-/* Título, con un margen superior para separar del resto */
-.row-titulo {
-  margin-top: 100px;
-}
-
 /* Espaciado entre las filas de imágenes */
 .row-img {
   margin-bottom: 15px;
@@ -27,7 +22,7 @@
 /* Estilo para las imágenes dentro de la cuadrícula */
 .img-fluid {
   width: 100%; /* Hace que las imágenes ocupen el 100% de su contenedor */
-  height: 200px; /* Establece una altura fija */
+  height: 30vh; /* Establece una altura fija */
   object-fit: cover; /* Hace que la imagen cubra el contenedor sin deformarse (recorta si es necesario) */
   opacity: 0.7; /* Le da una ligera opacidad */
   transition: opacity 0.5s ease; /* Transición suave de opacidad */
@@ -43,7 +38,7 @@
 /* Ajuste para la primera imagen que ocupa dos filas */
 .gallery-box-tall img {
   grid-row: span 2; /* Ocupa 2 filas en el sistema grid */
-  height: 415px !important; /* Altura equivalente a dos filas */
+  height: calc(60vh + 15px); /* Altura equivalente a dos filas */
   display: flex;
   align-items: center;
   justify-content: center;
