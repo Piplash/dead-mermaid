@@ -114,8 +114,30 @@
   background-position: -200% 0; /* Posición inicial */
 }
 
-.pintar:hover {
+.pintar,
+.pintar-2:hover {
   background-position: -100%;
+}
+
+/* ANIMACION */
+.pintar-2 {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    rgba(0, 255, 234, 0) 50%,
+    /* verde */ rgb(255, 0, 130) 50% /* rosado */
+  );
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition:
+    background-position 1s ease,
+    color 0.5s ease;
+  background-position: -200% 0; /* Posición inicial */
 }
 
 .text-par {

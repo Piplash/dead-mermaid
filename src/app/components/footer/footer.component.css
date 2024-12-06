@@ -1,0 +1,32 @@
+.container {
+  background: rgb(10, 200, 200);
+  color: #fff;
+  min-width: 100vw;
+  display: flex;
+}
+
+#footerLogo {
+  align-items: flex-start; /* Alinea los elementos al inicio de la columna */
+  gap: 20px; /* Añade espacio entre las filas */
+}
+
+#redes-titulo {
+  font-size: 2rem;
+}
+
+footer {
+  min-width: 90vw;
+  margin: 0 auto;
+}
+
+img {
+  max-height: 70px;
+}
+
+fa-icon {
+  font-size: 25px;
+}
+
+h1 {
+  padding-left: 10px;
+}
