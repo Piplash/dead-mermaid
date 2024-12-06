@@ -1,0 +1,59 @@
+.content-container {
+  min-height: 100vh;
+  display: flex;
+}
+
+.content {
+  color: black; /* Texto en blanco para mejor visibilidad */
+  min-width: 90vw; /* Limita el ancho del contenido */
+  padding: 20px;
+  align-self: center;
+  margin: 0 auto;
+}
+
+.col-right {
+  text-align: center;
+}
+
+.pintar:hover {
+  transition: 1s;
+  -webkit-text-stroke: 1px rgb(10, 200, 200) !important;
+}
+
+.col-left button {
+  margin: 0 auto;
+  display: flex;
+}
+
+img {
+  opacity: 0.7;
+  transition: 1s;
+  max-width: 70%;
+}
+
+img:hover {
+  opacity: 1;
+  transition: 1s;
+}
+
+/* Media query para pantallas de 800px o menos */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column; /* Cambia el diseño a filas verticales */
+    gap: 20px;
+  }
+
+  .col-left,
+  .col-right {
+    flex: none; /* Desactiva el tamaño flexible de las columnas en pantallas pequeñas */
+    width: 100%; /* Asegura que cada columna ocupe todo el ancho disponible */
+  }
+
+  .col-left {
+    order: 1; /* Cambia el orden para que la imagen esté abajo en pantallas pequeñas */
+  }
+
+  .col-right {
+    order: 2; /* La imagen estará abajo de la descripción */
+  }
+}

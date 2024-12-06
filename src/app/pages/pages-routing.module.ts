@@ -13,9 +13,19 @@ const routes: Routes = [
         loadComponent: () => import("./landing/landing.component"),
       },
       {
-        path: "reserva",
-        title: "reserva",
-        loadComponent: () => import("./reserva/reserva.component"),
+        path: "cotiza",
+        title: "cotiza",
+        loadComponent: () => import("./cotiza/cotiza.component"),
+      },
+      {
+        path: "portafolio",
+        title: "portafolio",
+        loadComponent: () => import("./portafolio/portafolio.component"),
+      },
+      {
+        path: "about",
+        title: "about",
+        loadComponent: () => import("./about/about.component"),
       },
       {
         path: "",

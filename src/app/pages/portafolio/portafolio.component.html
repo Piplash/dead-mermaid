@@ -1,45 +1,30 @@
-<div class="content-container">
-  <div class="content">
-    <div class="row row-titulo">
+<section id="inicio" class="inicio" #inicio>
+  <div class="landing-container">
+    <app-preloader></app-preloader>
+
+    <div class="content">
       <p class="font-barlow">DEAD MERMAID TATTOO</p>
-      <h1 class="font-oswald">
-        PORTAFOLIO -
-        <small
-          >BLACK WORK & <span class="pintar borders-black">COLOR</span></small
-        >
+      <h1
+        class="font-oswald"
+        style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7)"
+      >
+        ATRÉVETE A LLENAR TU PIEL
+        <br />
       </h1>
+      <h1 class="font-oswald">
+        <span class="borders-white pintar">DE COLOR </span>
+      </h1>
+
       <br />
-      <hr />
-      <br />
-    </div>
-    <div class="container">
-      @for (fila of filas; track $index) {
-        <div class="row row-img">
-          @for (imagen of fila; track $index) {
-            <div class="col-sm-3">
-              <img
-                [src]="'assets/portafolio/' + imagen.src"
-                [alt]="imagen.descripcion"
-                class="img-fluid"
-                (click)="detalleImagen(imagen)"
-              />
-            </div>
-          }
-        </div>
-      }
+      <button class="btn-custom btn-1">
+        <span class="btn-text font-barlow">QUIÉN SOY</span>
+      </button>
     </div>
   </div>
-  @if (selectedImage) {
-    <div class="fullscreen-overlay" (click)="closeFullScreen()">
-      <div class="fullscreen-container">
-        <img
-          [src]="'assets/portafolio/' + selectedImage"
-          class="fullscreen-image"
-          alt="fullscreenimg"
-        />
-        <button class="close-btn" (click)="closeFullScreen()">X</button>
-      </div>
-    </div>
-  }
-  <button (click)="enviarCorreo()">Enviar correo</button>
-</div>
+</section>
+<section id="sobre-mi" #sobreMi>
+  <app-fotos></app-fotos>
+</section>
+<section id="portafolio" #portafolio>
+  <app-video></app-video>
+</section>

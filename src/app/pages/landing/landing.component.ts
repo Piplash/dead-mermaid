@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { PreloaderComponent } from "../../components/preloader/preloader.component";
-import { AboutComponent } from "../about/about.component";
-import { PortafolioComponent } from "../portafolio/portafolio.component";
+import { AboutComponent } from "./about/about.component";
+import { PortafolioComponent } from "./portafolio/portafolio.component";
 
 @Component({
   selector: "app-landing",

@@ -1,0 +1,101 @@
+<div class="content-container">
+  <div class="content">
+    <div class="row row-titulo">
+      <p class="font-barlow">DEAD MERMAID TATTOO</p>
+      <h1 class="font-oswald">
+        COTIZA -
+        <small
+          >BLACK WORK & <span class="pintar borders-black">COLOR</span></small
+        >
+      </h1>
+      <br />
+      <hr />
+      <br />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-left col">
+          <img
+            src="../../../../assets/imagen-1.jpg"
+            alt=""
+            class="img-shadow"
+          />
+        </div>
+        <div class="col-right col font-oswald">
+          <form [formGroup]="tattooForm" (ngSubmit)="enviarFormulario()">
+            <div class="mb-3 d-flex align-items-center">
+              <label for="descripcion" class="form-label w-50">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                class="form-control"
+                placeholder="Escribe tu nombre"
+                formControlName="nombre"
+              />
+            </div>
+            <div class="mb-3 d-flex align-items-center">
+              <label for="descripcion" class="form-label w-50"
+                >Descripción</label
+              >
+              <input
+                type="text"
+                id="descripcion"
+                class="form-control"
+                placeholder="Escribe la descripción"
+                formControlName="descripcion"
+              />
+            </div>
+
+            <div class="mb-3 d-flex align-items-center">
+              <label for="estilo" class="form-label w-50">Estilo</label>
+              <select id="estilo" class="form-select" formControlName="estilo">
+                <option value="" disabled selected>Selecciona un estilo</option>
+                <option value="COLOR">COLOR</option>
+                <option value="BLANCO Y NEGRO">BLANCO Y NEGRO</option>
+              </select>
+            </div>
+
+            <div class="mb-3 d-flex align-items-center">
+              <label for="medidas" class="form-label w-50">Medidas (cm)</label>
+              <input
+                type="number"
+                id="medidas"
+                class="form-control"
+                placeholder="Ejemplo: 15"
+                formControlName="medidas"
+              />
+            </div>
+
+            <div class="mb-3 d-flex align-items-center">
+              <label for="zonaCuerpo" class="form-label w-50"
+                >Zona del cuerpo</label
+              >
+              <input
+                type="text"
+                id="zonaCuerpo"
+                class="form-control"
+                placeholder="Ejemplo: Brazo"
+                formControlName="zonaCuerpo"
+              />
+            </div>
+
+            <div class="mb-3 d-flex align-items-center">
+              <label class="form-label w-auto mensajeForm" for="mensaje"
+                >Recuerda adjuntar fotos junto a tu mensaje, una vez hayas hecho
+                click en el botón :)</label
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="btn-custom btn-2"
+              [disabled]="!tattooForm.valid"
+            >
+              <span class="btn-text font-barlow">COTIZA</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

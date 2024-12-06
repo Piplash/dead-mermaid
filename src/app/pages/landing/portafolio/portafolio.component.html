@@ -1,0 +1,112 @@
+<div class="content-container">
+  <div class="content">
+    <div class="row row-titulo text-center">
+      <p class="font-barlow">DEAD MERMAID TATTOO</p>
+      <h1 class="font-oswald">
+        PORTAFOLIO -
+        <small
+          >BLACK WORK & <span class="pintar borders-black">COLOR</span></small
+        >
+      </h1>
+      <hr />
+    </div>
+    <div class="container">
+      <div class="row">
+        <!-- Primera imagen en columna 1, con altura de 2 filas -->
+        <div class="col-md-6 gallery-item">
+          <div class="gallery-box gallery-box-tall">
+            <div class="gallery-img">
+              <img
+                src="assets/portafolio/7.jpg"
+                class="img-fluid mx-auto d-block"
+                alt="Imagen 7"
+                (click)="detalleImagen('7.jpg')"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Columna 2: dos imágenes en la primera fila -->
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-6 gallery-item">
+              <div class="gallery-box">
+                <div class="gallery-img">
+                  <img
+                    src="assets/portafolio/3.jpg"
+                    class="img-fluid mx-auto d-block"
+                    alt="Imagen 3"
+                    (click)="detalleImagen('3.jpg')"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 gallery-item">
+              <div class="gallery-box">
+                <div class="gallery-img">
+                  <img
+                    src="assets/portafolio/1.jpg"
+                    class="img-fluid mx-auto d-block"
+                    alt="Imagen 1"
+                    (click)="detalleImagen('1.jpg')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Columna 2: tres imágenes en la segunda fila -->
+          <div class="row mt-3">
+            <div class="col-md-4 gallery-item">
+              <div class="gallery-box">
+                <div class="gallery-img">
+                  <img
+                    src="assets/portafolio/4.jpg"
+                    class="img-fluid mx-auto d-block"
+                    alt="Imagen 4"
+                    (click)="detalleImagen('4.jpg')"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 gallery-item">
+              <div class="gallery-box">
+                <div class="gallery-img">
+                  <img
+                    src="assets/portafolio/5.jpg"
+                    class="img-fluid mx-auto d-block"
+                    alt="Imagen 5"
+                    (click)="detalleImagen('5.jpg')"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 gallery-item">
+              <div class="gallery-box">
+                <div class="gallery-img">
+                  <img
+                    src="assets/portafolio/8.jpg"
+                    class="img-fluid mx-auto d-block"
+                    alt="Imagen 8"
+                    (click)="detalleImagen('8.jpg')"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fullscreen Modal -->
+    @if (selectedImage) {
+      <div class="fullscreen-overlay" (click)="closeFullScreen()">
+        <div class="fullscreen-container">
+          <img
+            [src]="'assets/portafolio/' + selectedImage"
+            class="fullscreen-image"
+            alt="Fullscreen Imagen"
+          />
+          <button class="close-btn" (click)="closeFullScreen()">X</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

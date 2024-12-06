@@ -1,1 +1,31 @@
-<p>cotiza works!</p>
+<section id="inicio" class="inicio" #inicio>
+  <div class="landing-container">
+    <app-preloader></app-preloader>
+
+    <div class="content">
+      <p class="font-barlow">HOME / COTIZA</p>
+      <h1
+        class="font-oswald"
+        style="text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7)"
+      >
+        CUÉNTAME TU IDEA
+        <br />
+      </h1>
+      <h1 class="font-oswald">
+        <span class="borders-white pintar">Y AGENDA TU CITA </span>
+      </h1>
+      <hr />
+      <p style="text-align: left">
+        En negro, a color, tu personaje de anime favorito o alguna idea propia.
+        Rellena el formulario y me pondré en contacto contigo
+      </p>
+      <br />
+      <button class="btn-custom btn-1" (click)="scrollTo(cotiza)">
+        <span class="btn-text font-barlow">COTIZA TU TATUAJE ACÁ</span>
+      </button>
+    </div>
+  </div>
+</section>
+<section id="cotiza" #cotiza>
+  <app-formulario-cotizacion></app-formulario-cotizacion>
+</section>

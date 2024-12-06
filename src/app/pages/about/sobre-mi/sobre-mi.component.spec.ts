@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InicioAdmComponent } from './inicio-adm.component';
+import { SobreMiComponent } from './sobre-mi.component';
 
-describe('InicioAdmComponent', () => {
-  let component: InicioAdmComponent;
-  let fixture: ComponentFixture<InicioAdmComponent>;
+describe('SobreMiComponent', () => {
+  let component: SobreMiComponent;
+  let fixture: ComponentFixture<SobreMiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InicioAdmComponent]
+      imports: [SobreMiComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(InicioAdmComponent);
+    fixture = TestBed.createComponent(SobreMiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

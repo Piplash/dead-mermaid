@@ -65,6 +65,20 @@
   background: rgb(255, 0, 130);
 }
 
+/* Specific Button Variations */
+.btn-custom.btn-2 {
+  background: rgb(133, 219, 111);
+  color: #fff;
+}
+
+.btn-custom.btn-2:hover {
+  color: #fff;
+}
+
+.btn-custom.btn-2:after {
+  background: rgb(255, 0, 130);
+}
+
 .btn-text {
   font-weight: 300;
 }
@@ -106,4 +120,8 @@
 
 .text-par {
   text-align: justify;
+}
+
+.img-shadow {
+  box-shadow: 7px 8px 0px rgb(255, 0, 130);
 }

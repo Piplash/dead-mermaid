@@ -1,22 +1,13 @@
-import { Component, Input } from "@angular/core";
-import { PortafolioComponent } from "../portafolio/portafolio.component";
+import { Component } from "@angular/core";
+import { SobreMiComponent } from "./sobre-mi/sobre-mi.component";
+import { RandomComponent } from "./random/random.component";
+import { PreloaderComponent } from "../../components/preloader/preloader.component";
 
 @Component({
   selector: "app-about",
   standalone: true,
-  imports: [],
+  imports: [SobreMiComponent, RandomComponent, PreloaderComponent],
   templateUrl: "./about.component.html",
   styleUrl: "./about.component.css",
 })
-export class AboutComponent {
-  @Input() portafolio!: any;
-
-  public scrollTo(seccion: any) {
-    console.log(seccion);
-    this.portafolio?.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-      inline: "nearest",
-    });
-  }
-}
+export default class AboutComponent {}

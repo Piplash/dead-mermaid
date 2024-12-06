@@ -1,23 +1,22 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { PortafolioComponent } from './portafolio.component';
+import { PortafolioComponent } from "./portafolio.component";
 
-describe('PortafolioComponent', () => {
+describe("PortafolioComponent", () => {
   let component: PortafolioComponent;
   let fixture: ComponentFixture<PortafolioComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PortafolioComponent]
-    })
-    .compileComponents();
-    
+      imports: [PortafolioComponent],
+    }).compileComponents();
+
     fixture = TestBed.createComponent(PortafolioComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
